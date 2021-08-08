@@ -1,6 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f4;
 }
 /* banner image */
 /* https://i.ibb.co/JnmTD12/banner.jpg */
