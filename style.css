@@ -2,3 +2,12 @@
     margin: 0;
     padding: 0;
 }
+/* banner image */
+/* https://i.ibb.co/JnmTD12/banner.jpg */
+
+.main-content-banner {
+    background-image: url('https://i.ibb.co/JnmTD12/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    
+}
