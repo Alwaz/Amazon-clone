@@ -14,6 +14,13 @@
         integrity="sha384-VngWWnG9GS4jDgsGEUNaoRQtfBGiIKZTiXwm9KpgAeaRn6Y/1tAFiyXqSzqC8Ga/" crossorigin="anonymous">
         </script>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+
     <!-- Tailwind CSS CDN-->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
@@ -22,7 +29,7 @@
 
 <body>
     <!-- main container -->
-    <div class="container w-screen">
+    <div class="container w-screen h-screen">
         <!-- navbar -->
         <div class="navbar w-screen h-20 bg-gray-900 flex items-center">
 
@@ -97,8 +104,8 @@
 
         </div> <!-- end of nav-bar -->
 
-        <!-- side bar container -->
-        <div class="main h-screen flex w-screen">
+        <!-- main container for sidebarand products -->
+        <div class="main  h-screen flex w-screen">
 
             <div class="sidebar h-screen w-1/5 bg-gray-900 border-t-2 border-gray-500">
                 <div
@@ -296,6 +303,11 @@
                         <div class="price text-gray-800 font-bold text-lg">
                             $290,00
                         </div>
+
+                        <div class="add-to-cart-btn text-xl flex mr-8 cursor-pointer justify-center items-center bg-yellow-500 
+                        text-white w-48 mt-2 h-12 rounded font-bold hover:bg-yellow-600">
+                            Add To Cart
+                        </div>
                     </div>
 
                     <!-- Product 2 -->
@@ -319,6 +331,11 @@
                         <div class="price text-gray-800 font-bold text-lg">
                             $3249,00
                         </div>
+
+                        <div class="add-to-cart-btn text-xl flex mr-8 cursor-pointer justify-center items-center bg-yellow-500 
+                        text-white w-48 h-12 mt-2 rounded font-bold hover:bg-yellow-600">
+                            Add To Cart
+                        </div>
                     </div>
 
                     <!-- Product 3 -->
@@ -341,6 +358,11 @@
                         <div class="price text-gray-800 font-bold text-lg">
                             $794,00
                         </div>
+
+                        <div class="add-to-cart-btn mt-2 text-xl flex mr-8 cursor-pointer justify-center items-center bg-yellow-500 
+                        text-white w-48 h-12 rounded font-bold hover:bg-yellow-600">
+                            Add To Cart
+                        </div>
                     </div>
 
 
@@ -352,8 +374,6 @@
                                 src="data:image/jpeg;base64,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"
                                 alt="nintendo">
                         </div>
-
-
                         <div class="product-name text-gray-700 font-bold ">
                             Apple MacBook Pro 13,3
                         </div>
@@ -368,13 +388,13 @@
                         <div class="price text-gray-800 font-bold text-lg">
                             $1149,00
                         </div>
+
+                        <div class="add-to-cart-btn text-xl flex mr-8 cursor-pointer justify-center items-center bg-yellow-500 
+                        text-white w-48 h-12 rounded mt-2 font-bold hover:bg-yellow-600">
+                            Add To Cart
+                        </div>
                     </div>
-
-
-
                 </div>
-
-
             </div>
             <!-- end of banner section-->
 
